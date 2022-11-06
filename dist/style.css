@@ -1,0 +1,271 @@
+body {
+  background-color: #222;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.3);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+#content {
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Ubuntu", sans-serif;
+}
+#content .bg-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100vh;
+  width: 100vw;
+  z-index: -1;
+}
+#content .header-content {
+  font-weight: 300;
+  height: 45px;
+  width: 90vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-top: 5px;
+  padding-top: 10px;
+  color: white;
+  font-size: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+#content .header-content .page-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+  align-self: center;
+  height: 100%;
+}
+#content .header-content .page-list div {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+#content .header-content .page-list div p {
+  cursor: pointer;
+  width: 75%;
+  text-align: center;
+  position: relative;
+  display: inline-block;
+}
+#content .header-content .page-list div p:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 1px;
+  opacity: 70%;
+  left: 50%;
+  position: absolute;
+  background: #fff;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+#content .header-content .page-list div p:hover:after {
+  width: 100%;
+  left: 0;
+}
+#content .header-content .page-list div p:active {
+  color: rgb(140, 140, 140);
+}
+#content .header-content .logo {
+  text-align: center;
+  font-size: 1.5rem;
+  position: relative;
+  z-index: 2;
+}
+#content .header-content .logo p {
+  font-family: "EB Garamond", serif;
+}
+#content .header-content .socials {
+  display: flex;
+  text-align: end;
+  justify-content: flex-end;
+  align-items: center;
+}
+#content .header-content .socials div {
+  display: flex;
+  justify-content: center;
+  width: 125px;
+  height: 100%;
+}
+#content .header-content .socials div p {
+  width: 70%;
+  cursor: pointer;
+  text-align: center;
+  padding-bottom: 5px;
+  position: relative;
+  display: inline-block;
+}
+#content .header-content .socials div p:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 1px;
+  opacity: 70%;
+  left: 50%;
+  position: absolute;
+  background: #fff;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+#content .header-content .socials div p:hover:after {
+  width: 100%;
+  left: 0;
+}
+#content .header-content .socials div p:active {
+  color: rgb(140, 140, 140);
+}
+#content .home-container {
+  height: calc(100vh - 70px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#content .home-container .slogan {
+  display: flex;
+  align-items: center;
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.3);
+  font-size: 9vw;
+  color: transparent;
+}
+#content .home-container .main-text {
+  color: #fff;
+  position: absolute;
+  font-size: 7rem;
+  opacity: 80%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+#content .about-container {
+  height: calc(100vh - 50px);
+  display: grid;
+  grid-template-columns: 40vw 40vw;
+  gap: 40px;
+  justify-content: center;
+  align-items: center;
+  width: 80vw;
+  border-left: 1px solid rgba(255, 255, 255, 0.301);
+}
+#content .about-container .restaurant-img {
+  width: 40vw;
+  border-right: 1px solid rgba(255, 255, 255, 0.082);
+}
+#content .about-container .restaurant-img img {
+  width: 600px;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+#content .about-container .text {
+  width: 40vw;
+  color: #fff;
+  border-right: 1px solid rgba(255, 255, 255, 0.174);
+}
+#content .about-container .text h1 {
+  padding-bottom: 20px;
+  opacity: 80%;
+}
+#content .about-container .text p {
+  opacity: 60%;
+  width: 600px;
+  text-align: justify;
+  text-justify: inter-word;
+}
+#content .menu-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: calc(100vh - 70px);
+  width: 80vw;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  color: #fff;
+}
+#content .menu-container h2 {
+  font-family: "Cormorant Infant", serif;
+  width: 100%;
+  padding: 20px 0;
+  padding-bottom: 2px;
+  font-size: 1.8rem;
+  text-align: center;
+  letter-spacing: 4px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+#content .menu-container .menu-list {
+  display: flex;
+  flex-direction: column;
+  width: max(60vw, 600px);
+  padding-top: 20px;
+}
+#content .menu-container .menu-list .menu-item {
+  display: flex;
+  justify-content: center;
+  flex: 1 1 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.229);
+  transition: 0.5s;
+  cursor: pointer;
+}
+#content .menu-container .menu-list .menu-item:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+#content .menu-container .menu-list .menu-item .menu-info {
+  min-width: max(55%, 300px);
+  padding: 15px max(5%, 25px);
+}
+#content .menu-container .menu-list .menu-item .menu-info h3 {
+  font-size: 1.5rem;
+  opacity: 80%;
+}
+#content .menu-container .menu-list .menu-item .menu-info p {
+  opacity: 70%;
+  text-align: justify;
+}
+#content .menu-container .menu-list .menu-item img {
+  min-width: max(35%, 300px);
+  min-height: max(35%, 300px);
+  padding: 10px max(5%, 25px);
+  border-radius: 5%;
+}
+#content .menu-container .menu-list .menu-item:nth-child(odd) {
+  flex-direction: row-reverse;
+}
+
+.blur {
+  filter: blur(5px);
+  z-index: -1;
+}/*# sourceMappingURL=style.css.map */
